@@ -1,0 +1,19 @@
+# NetBeans
+nbproject/private/
+
+# Archivos generados por NetBeans
+build/
+dist/
+
+# Archivos generados por GlassFish
+gfdeploy/
+
+# Compilación Java
+*.class
+
+# Logs
+*.log
+
+# Sistema operativo
+.DS_Store
+Thumbs.db

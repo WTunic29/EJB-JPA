@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EJB - JPA | Sistema Académico</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f8;
+            color: #2c3e50;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 17px;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 35px;
+            font-size: 26px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            text-decoration: none;
+            background: #2c3e50;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .button:hover {
+            background: #1a252f;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        @media (max-width: 800px) {
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <h1>EJB - JPA</h1>
+
+        <p>
+            Sistema de Gestión Académica
+        </p>
+
+    </header>
+
+    <main class="container">
+
+        <h2>Seleccione una opción</h2>
+
+        <div class="cards">
+
+            <!-- STUDENTS -->
+
+            <div class="card">
+
+                <div class="icon">🎓</div>
+
+                <h3>Estudiantes</h3>
+
+                <p>
+                    Gestionar información de estudiantes,
+                    incluyendo registro, búsqueda,
+                    edición y eliminación.
+                </p>
+
+                <a href="StudentServlet" class="button">
+                    Gestionar estudiantes
+                </a>
+
+            </div>
+
+
+            <!-- CURSOS -->
+
+            <div class="card">
+
+                <div class="icon"> ✏️ </div>
+
+                <h3>Cursos</h3>
+
+                <p>
+                    Administrar los cursos disponibles,
+                    sus créditos, semestre y
+                    estudiantes admitidos.
+                </p>
+
+                <a href="CursoServlet" class="button">
+                    Gestionar cursos
+                </a>
+
+            </div>
+
+
+            <!-- MANY TO MANY -->
+
+            <div class="card">
+
+                <div class="icon"> 📋 </div>
+
+                <h3>Asignaciones</h3>
+
+                <p>
+                    Asignar cursos a estudiantes,
+                    consultar sus cursos y
+                    administrar las relaciones.
+                </p>
+
+                <a href="AsignarCursoServlet" class="button">
+                    Gestionar asignaciones
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+
+        <p>
+            Aplicación desarrollada con Jakarta EE, EJB, JPA y Derby
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
